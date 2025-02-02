@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesly, ¿Quieres ser mi San Valentín? 💖</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #ffe6e6;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #ff4d4d;
+        }
+        .contenedor {
+            margin-top: 50px;
+        }
+        .boton {
+            font-size: 1.5em;
+            padding: 10px 20px;
+            margin: 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        .si {
+            background-color: #ff4d4d;
+            color: white;
+        }
+        .no {
+            background-color: #4d4dff;
+            color: white;
+            position: absolute;
+        }
+        img {
+            width: 200px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Lesly, ¿Quieres ser mi San Valentín? 💘</h1>
+    
+    <div class="contenedor">
+        <button class="boton si" onclick="alert('¡Sabía que dirías que sí! 💖😍')">Sí</button>
+        <button class="boton no" id="noBtn">No</button>
+    </div>
+
+    <img src="https://i.pinimg.com/originals/cd/56/60/cd5660e252929ba6c6f36976f801fadf.png" alt="Gatitos enamorados">
+
+    <script>
+        const noBtn = document.getElementById('noBtn');
+
+        noBtn.addEventListener('mouseover', () => {
+            const x = Math.random() * (window.innerWidth - noBtn.clientWidth);
+            const y = Math.random() * (window.innerHeight - noBtn.clientHeight);
+            noBtn.style.left = `${x}px`;
+            noBtn.style.top = `${y}px`;
+        });
+    </script>
+
+</body>
+</html>
